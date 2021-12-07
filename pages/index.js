@@ -1,13 +1,37 @@
-import Head from "next/head";
-import Image from "next/image";
-import { useEffect } from "react";
 import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
 export default function Home() {
-  console.log("1. Before useHook");
-  useEffect(() => {
-    console.log("2. Inside useHook");
-  }, []);
-  console.log("3. After useHook");
-  return <div className={styles.container}>CRS-Example</div>;
+  return (
+    <div className={styles.container}>
+      <p>Data Fetching Example</p>
+      <ul>
+        <li>
+          <Link href="/">
+            <a>Home</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/csr-example">
+            <a>CSR Example</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/ssr-example">
+            <a>SSR Example</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/ssg-example">
+            <a>SSG Example</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/isr-example">
+            <a>ISR Example</a>
+          </Link>
+        </li>
+      </ul>
+    </div>
+  );
 }
