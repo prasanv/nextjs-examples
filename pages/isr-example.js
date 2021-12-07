@@ -1,6 +1,7 @@
 export default function ISRExample({ dateTime }) {
   const d = new Date();
   const componentTime = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}.${d.getMilliseconds()}`;
+  console.log(componentTime);
 
   return (
     <main>
