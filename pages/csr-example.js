@@ -6,7 +6,7 @@ import styles from "../styles/Home.module.css";
 export default function CSRExample() {
   const [dateTime, setDateTime] = useState(null);
   const d = new Date();
-  const componentTime = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}.${d.getMilliseconds()}`;
+  const componentTime = `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}T${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}.${d.getMilliseconds()}`;
 
   console.log("1. Before useHook");
 
@@ -26,8 +26,8 @@ export default function CSRExample() {
   return (
     <div className={styles.container}>
       <p>CRS-Example</p>
-      <p>dateTime from componentTime ={componentTime}</p>
-      <p>dateTime from useEffect fetch - {dateTime}</p>
+      <p>dateTime from componentTime = {componentTime}</p>
+      <p>dateTime from useEffect fetch = {dateTime}</p>
     </div>
   );
 }

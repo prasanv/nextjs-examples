@@ -1,13 +1,13 @@
 export default function ISRExample({ dateTime }) {
   const d = new Date();
-  const componentTime = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}.${d.getMilliseconds()}`;
+  const componentTime = `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}T${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}.${d.getMilliseconds()}`;
   console.log(componentTime);
 
   return (
     <main>
       <p>ISR-Example</p>
-      <p> dateTime from componentTime ={componentTime}</p>
-      <p> dateTime from server ={dateTime}</p>
+      <p> dateTime from componentTime = {componentTime}</p>
+      <p> dateTime from server = {dateTime}</p>
     </main>
   );
 }
