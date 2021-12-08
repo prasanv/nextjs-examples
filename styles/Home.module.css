@@ -6,4 +6,5 @@
   list-style-type: none;
   text-decoration: underline;
   padding: 10px;
+  display: inline;
 }
