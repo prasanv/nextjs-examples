@@ -1,13 +1,12 @@
+import ComponentTime from "../comps/componentTime"
+
 export default function SSRExample({ dateTime }) {
-  const d = new Date();
-  const componentTime = `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}T${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}.${d.getMilliseconds()}`;
-  console.log(componentTime);
 
   return (
     <main>
       <p>SSR-Example</p>
-      <p> dateTime from componentTime = {componentTime}</p>
-      <p> dateTime from server = {dateTime}</p>
+      <ComponentTime />
+      <p>server side fetch = {dateTime} (API fetch on page refresh)</p>
     </main>
   );
 }

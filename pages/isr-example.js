@@ -1,13 +1,13 @@
+import ComponentTime from "../comps/componentTime"
+
 export default function ISRExample({ dateTime }) {
   const d = new Date();
-  const componentTime = `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}T${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}.${d.getMilliseconds()}`;
-  console.log(componentTime);
 
   return (
     <main>
       <p>ISR-Example</p>
-      <p> dateTime from componentTime = {componentTime}</p>
-      <p> dateTime from server = {dateTime}</p>
+      <ComponentTime />
+      <p>server side fetch = {dateTime} (incremental API fetch)</p>
     </main>
   );
 }
